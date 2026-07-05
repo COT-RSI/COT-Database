@@ -5,6 +5,10 @@ on:
     - cron: '45 23 * * 5'
   workflow_dispatch:
 
+# CRITICAL SECURITY BYPASS: Script ko repository mein file write karne ki direct ijazat dena
+permissions:
+  contents: write
+
 jobs:
   build-matrix:
     runs-on: ubuntu-latest
